@@ -28,7 +28,7 @@ export default function Login({ status, canResetPassword }) {
 
     return (
         <>
-            <form onSubmit={submit} class="form  flex-lg-row flex-column-fluid w-100 d-flex flex-column flex-root" id="kt_app_root">
+            <form onSubmit={submit} class="form flex-lg-row flex-column-fluid w-100 d-flex flex-column flex-root" style = {{height : '100vh'}} id="kt_app_root">
                 
                 {/* <!--begin::Authentication - Sign-in --> */}
                 {/* <!--begin::Logo--> 
@@ -56,9 +56,9 @@ export default function Login({ status, canResetPassword }) {
                                         Not a Member yet?
                                     </span>
             
-                                    <a href="sign-up.html" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">
+                                    <Link href={route('register')} class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">
                                         Sign Up
-                                    </a>       
+                                    </Link>       
                                 </div>
                                 {/* <!--end::Sign Up link--->       */}
                                             
@@ -167,30 +167,6 @@ export default function Login({ status, canResetPassword }) {
                                         {/* <!--end::Indicator progress--> */}
                                     {/* <!--end::Submit--> */}
                         
-                                    {/* <!--begin::Social--> */}
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-gray-400 fw-semibold fs-6 me-3 me-md-6" data-kt-translate="general-or">Or</div>
-                        
-                                        {/* <!--begin::Symbol--> */}
-                                        <a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
-                                            <img alt="Logo" src="../../../assets/media/svg/brand-logos/google-icon.svg" class="p-4"/>
-                                        </a>
-                                        {/* <!--end::Symbol--> */}
-                        
-                                        {/* <!--begin::Symbol--> */}
-                                        <a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
-                                            <img alt="Logo" src="../../../assets/media/svg/brand-logos/facebook-3.svg" class="p-4"/>
-                                        </a>
-                                        {/* <!--end::Symbol--> */}
-                        
-                                        {/* <!--begin::Symbol--> */}
-                                        <a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light">
-                                            <img alt="Logo" src="../../../assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show p-4"/>
-                                            <img alt="Logo" src="../../../assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show p-4"/>
-                                        </a>
-                                        {/* <!--end::Symbol--> */}
-                                    </div>
-                                    {/* <!--end::Social--> */}
                                 </div>
                                 {/* <!--end::Actions--> */}
                             </div> 
@@ -204,7 +180,7 @@ export default function Login({ status, canResetPassword }) {
                         {/* <!--begin::Footer--> */}
                         <div class="m-0">             
                             {/* <!--begin::Toggle--> */}
-                            <button class="btn btn-flex btn-link rotate" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">
+                            <button type = "button" class="btn btn-flex btn-link rotate" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">
                                 <img  data-kt-element="current-lang-flag" class="w-25px h-25px rounded-circle me-3" src="../../../assets/media/flags/united-states.svg" alt=""/>
                                 
                                 <span data-kt-element="current-lang-name" class="me-2">English</span>
